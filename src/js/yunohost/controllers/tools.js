@@ -171,5 +171,8 @@
             });
         });
     });
-
+    
+    // Disk management
+    app.get('#/tools/list', function (c) {
+        c.api('');
 })();

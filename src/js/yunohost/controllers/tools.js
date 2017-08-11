@@ -173,6 +173,9 @@
     });
     
     // Disk management
-    app.get('#/tools/list', function (c) {
-        c.api('');
+    app.get('#/tools/list_all', function (c) {
+        c.api('/part/list_all', function (list_all) {
+            c.view('tools/tools_list_all', {'partition' : partition});
+        });
+    });
 })();
